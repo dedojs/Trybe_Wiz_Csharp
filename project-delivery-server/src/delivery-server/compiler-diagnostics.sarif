@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Compilador do Microsoft (R) Visual C#",
+        "version": "4.4.0.0",
+        "fileVersion": "4.4.0-3.22518.13 (7856a68c)",
+        "semanticVersion": "4.4.0",
+        "language": "pt-BR"
+      },
+      "results": [
+        {
+          "ruleId": "CS4014",
+          "level": "warning",
+          "message": "Como esta chamada não é aguardada, a execução do método atual continua antes da conclusão da chamada. Considere aplicar o operador 'await' ao resultado da chamada.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Trybe-C%23/semana1/acc-csharp-09-project-delivery-server/src/delivery-server/ProcessOrders.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 9,
+                  "endLine": 18,
+                  "endColumn": 68
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS1998",
+          "level": "warning",
+          "message": "Este método assíncrono não possui operadores 'await' e será executado de modo síncrono. É recomendável o uso do operador 'await' para aguardar chamadas à API desbloqueadas ou do operador 'await Task.Run(...)' para realizar um trabalho associado à CPU em um thread em segundo plano.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Trybe-C%23/semana1/acc-csharp-09-project-delivery-server/src/delivery-server/Order.cs",
+                "region": {
+                  "startLine": 26,
+                  "startColumn": 23,
+                  "endLine": 26,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CS1998": {
+          "id": "CS1998",
+          "shortDescription": "O método assíncrono não possui operadores 'await' e será executado de forma síncrona",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1998)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS4014": {
+          "id": "CS4014",
+          "shortDescription": "Como esta chamada não é esperada, a execução do método atual continua antes de a chamada ser concluída",
+          "fullDescription": "O método atual chama um método assíncrono que retorna uma Tarefa ou uma Tarefa<TResult> e não aplica o operador \"await\" ao resultado. A chamada ao método assíncrono inicia uma tarefa assíncrona. No entanto, como o operador \"await\" está aplicado, o programa continua sem aguardar a conclusão da tarefa. Na maioria dos casos, você não deseja esse comportamento. Geralmente, outros aspectos do método da chamada dependem dos resultados da chamada ou, no mínimo, espera-se que o método chamado seja concluído antes que você volte do método que contém a chamada.\u000d\u000a\u000d\u000aOutra questão importante é o que acontece com as exceções que são acionadas no método assíncrono chamado. As exceções acionadas em métodos que retornam uma Task ou Task<TResult> são armazenadas na tarefa retornada. Se você não aguardar a tarefa ou verificar explicitamente se há exceções, a exceção se perde. Se você aguardar a tarefa, a exceção é gerada novamente.\u000d\u000a\u000d\u000aComo melhor prática, recomendamos que você sempre aguarde a chamada.\u000d\u000a\u000d\u000aVocê pode suprimir o aviso se tiver certeza de que não vai querer aguardar a conclusão da chamada assíncrona e de que o método da chamada não gerará exceções. Nesse caso, você pode atribuir o resultado de uma tarefa da chamada a uma variável para suprimir o aviso.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS4014)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
