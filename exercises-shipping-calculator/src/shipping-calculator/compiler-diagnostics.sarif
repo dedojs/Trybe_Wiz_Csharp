@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Compilador do Microsoft (R) Visual C#",
+        "version": "4.4.0.0",
+        "fileVersion": "4.4.0-3.22518.13 (7856a68c)",
+        "semanticVersion": "4.4.0",
+        "language": "pt-BR"
+      },
+      "results": [
+        {
+          "ruleId": "CA1822",
+          "level": "note",
+          "message": "O membro 'CalculateShipping' não acessa os dados da instância e pode ser marcado como estático",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Trybe-C%23/repositorio%20trybe/acc-csharp-09-exercises-shipping-calculator/src/shipping-calculator/ShippingCalculator.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 20,
+                  "endLine": 13,
+                  "endColumn": 37
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CA1822": {
+          "id": "CA1822",
+          "shortDescription": "Marcar membros como estáticos",
+          "fullDescription": "Os membros que não acessam os dados da instância nem chamam os métodos da instância podem ser marcados como estáticos. Depois que você marcar os métodos como estáticos, o compilador emitirá os sites de chamada não virtuais para esses membros. Isso pode oferecer um ganho de desempenho mensurável para códigos sensíveis ao desempenho.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1822",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "PortedFromFxCop",
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
