@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Compilador do Microsoft (R) Visual C#",
+        "version": "4.4.0.0",
+        "fileVersion": "4.4.0-3.22518.13 (7856a68c)",
+        "semanticVersion": "4.4.0",
+        "language": "pt-BR"
+      },
+      "results": [
+        {
+          "ruleId": "CS0472",
+          "level": "warning",
+          "message": "O resultado da expressão é sempre 'false', pois um valor do tipo 'int' nunca é igual a \"null\" do tipo 'int?'",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Trybe-C%23/repositorio%20trybe/acc-csharp-09-exercises-generic-list/src/generic-list/GenericList.cs",
+                "region": {
+                  "startLine": 57,
+                  "startColumn": 13,
+                  "endLine": 57,
+                  "endColumn": 26
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 2
+          }
+        },
+        {
+          "ruleId": "CS0169",
+          "level": "warning",
+          "message": "O campo \"GenericList<T>.Count\" nunca é usado",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Trybe-C%23/repositorio%20trybe/acc-csharp-09-exercises-generic-list/src/generic-list/GenericList.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 17,
+                  "endLine": 18,
+                  "endColumn": 22
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 3
+          }
+        }
+      ],
+      "rules": {
+        "CS0169": {
+          "id": "CS0169",
+          "shortDescription": "O campo nunca é usado",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0169)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS0472": {
+          "id": "CS0472",
+          "shortDescription": "O resultado da expressão é sempre o mesmo, pois um valor deste tipo nunca é 'null' ",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS0472)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
