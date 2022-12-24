@@ -1,0 +1,1 @@
+dotnet ef dbcontext scaffold "data source=E:\Trybe-C#\repositorio trybe\acc-csharp-09-exercises-popular-libraries\src\PopularLibraries.db" Microsoft.EntityFrameworkCore.Sqlite --output-dir Models
