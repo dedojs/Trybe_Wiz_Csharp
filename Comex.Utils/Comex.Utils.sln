@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comex.Utils", "Comex.Utils\Comex.Utils.csproj", "{C957BCA9-9BA7-4B90-A0D8-5940C4B47622}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comex.Utils.Testes", "Comex.Utils.Testes\Comex.Utils.Testes.csproj", "{30E5279F-EE7E-4E5E-B0A7-BBF3D5E59583}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C957BCA9-9BA7-4B90-A0D8-5940C4B47622} = {C957BCA9-9BA7-4B90-A0D8-5940C4B47622}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C957BCA9-9BA7-4B90-A0D8-5940C4B47622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C957BCA9-9BA7-4B90-A0D8-5940C4B47622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C957BCA9-9BA7-4B90-A0D8-5940C4B47622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C957BCA9-9BA7-4B90-A0D8-5940C4B47622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30E5279F-EE7E-4E5E-B0A7-BBF3D5E59583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30E5279F-EE7E-4E5E-B0A7-BBF3D5E59583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30E5279F-EE7E-4E5E-B0A7-BBF3D5E59583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30E5279F-EE7E-4E5E-B0A7-BBF3D5E59583}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18A75DBE-AD27-4261-BD8B-205088AC9E62}
+	EndGlobalSection
+EndGlobal
